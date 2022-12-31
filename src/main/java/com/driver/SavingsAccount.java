@@ -3,7 +3,12 @@ package com.driver;
 public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
-
+    public double getMaxWithdrawalLimit(){
+        return maxWithdrawalLimit;
+    }
+    public double getRate(){
+        return rate;
+    }
     public SavingsAccount(String name, double balance, double maxWithdrawalLimit, double rate) {
         // minimum balance is 0 by default
         super(name,balance,0);
@@ -36,12 +41,7 @@ public class SavingsAccount extends BankAccount{
 //        return finalAmount;
         return getBalance() * Math.pow((1 + getRate() / (100*times)), times * years);
     }
-    public double getMaxWithdrawalLimit(){
-        return maxWithdrawalLimit;
-    }
-    public double getRate(){
-        return rate;
-    }
+
 
 }
 
