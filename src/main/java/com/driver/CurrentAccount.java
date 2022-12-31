@@ -22,12 +22,11 @@ public class CurrentAccount extends BankAccount{
         boolean valid = FindValidy(tradeLicenseId);
         if(!valid){
             String newId = rearangeCharaters(tradeLicenseId);
-            if(newId.length() == 0){
-                throw  new Exception("Valid License can not be generated");
+            if(newId.length() == 0) {
+                throw new Exception("Valid License can not be generated");
             }
-            boolean checkValidityAgain = FindValidy(newId);
-            if(checkValidityAgain == false){
-                throw  new Exception("Valid License can not be generated");
+            else{
+                tradeLicenseId = newId;
             }
         }
 
