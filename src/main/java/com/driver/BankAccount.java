@@ -5,15 +5,6 @@ public class BankAccount {
     private String name;
     private double balance;
     private double minBalance;
-    public double getMinBalance(){
-        return minBalance;
-    }
-    public double getBalance(){
-        return balance;
-    }
-    public String getName(){
-        return name;
-    }
     public BankAccount(String name,double balance,double minBalance) {
         this.name = name;
         this.balance = balance;
@@ -54,6 +45,15 @@ public class BankAccount {
         else{
             throw new Exception("Insufficient Balance");
         }
+    }
+    public double getMinBalance(){
+        return minBalance;
+    }
+    public double getBalance(){
+        return balance;
+    }
+    public String getName(){
+        return name;
     }
 
 }
