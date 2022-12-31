@@ -23,7 +23,7 @@ public class CurrentAccount extends BankAccount{
         boolean valid = FindValidy(tradeLicenseId);
         if(!valid){
             String newId = rearangeCharaters(tradeLicenseId);
-            if(newId.length() == 0) {
+            if(newId == "") {
                 throw new Exception("Valid License can not be generated");
             }
             else{
@@ -74,7 +74,7 @@ public class CurrentAccount extends BankAccount{
                 count[i]--;
             }
         }
-        return res;
+        return res.toUpperCase();
     }
     public char getMaxCountChar(int count[]){
         int max = 0;
